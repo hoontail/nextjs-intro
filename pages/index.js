@@ -9,7 +9,7 @@ export default function Home() {
         <div>안녕하세요  </div>
         <div> ㅇㅇㅇㅇ 입니다</div>
         <div>저는 ㅇㅇㅇㅇ</div>
-        <button> 알아보기</button>
+        <button> 알아보기!</button>
       </article>
       <article className={"Box"}>
       <span className={"title"}>  ABOUT ME</span>
