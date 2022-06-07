@@ -1,24 +1,27 @@
-import {useState} from "react"
-import NavBar from "../components/NavBar"
+import { useState } from "react";
 
-
-export default function Home(){
-
+export default function Home() {
   return (
     <div>
-      <NavBar/>
-      <h1>hello</h1>
-      {/* 글로벌만 추가해주면 전역 (최상위여서 그런가 ?) */}
-      <style jsx global>  
-        {`
-          a{
-            color:white
-          }
+      <section className={"Head"}>LTH`s portfolio</section>
+      <h1>ㄴㅇㄹ</h1>
+      <style jsx>{`
+        h1{
+          color: brown;
+        }
+        .Head{
+          color: #191919;
+          font-size: 24px;
+          padding: 8px 24px;
+          font-weight: bold;
+          
+        } 
+        .Head:hover{
+          color : brown;
+        }
         `}
 
       </style>
-
     </div>
-
-  )
+  );
 }
