@@ -24,6 +24,7 @@ Next.js에 대한 이해와 포트폴리오 제작을 위해 진행해본 프로
 또한 이전 팀 프로젝트때 경험하지 못해본 CI/CD 환경 구축과 https 배포를 진행하여 경험해 보았습니다.
 
 <br><br>
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/753bcc45-5643-441b-8d5b-0289b3100d4e/Untitled.png)
 
 🔨 Technology Stack(s)<br><br>
 Frontend : Next.js<br>
