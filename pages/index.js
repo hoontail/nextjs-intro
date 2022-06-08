@@ -1,9 +1,8 @@
-
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-
       <main>
         <h1 className={"Head"}>hoontail`s Portfolio</h1>
         <article className={"intro"}>
@@ -13,6 +12,8 @@ export default function Home() {
           <div>저는 ㅇㅇㅇㅇ</div>
           <button> 알아보기!</button>
         </article>
+        
+        {/* 프로필 */}
         <article className={"Box"}>
           <div className={"title"}> ABOUT ME</div>
           <div className={"About_box"}>
@@ -27,7 +28,7 @@ export default function Home() {
               <div className={"About_me_card"}>
                 <div className={"About_icon"}> 아이콘</div>
                 <div>
-                  <div className={"About_title"}> 생년월일</div>
+                  <div className={"About_title"}>생년월일</div>
                   <div className={"About_desc"}> 94.04.02</div>
                 </div>
               </div>
@@ -50,10 +51,38 @@ export default function Home() {
             </div>
           </div>
         </article>
-        <article className={"Box"}>
+
+        {/* 기술스택 */}
+        <article className={"Box"} >
           <div className={"title"}> SKILLS</div>
-          <div> 기술스택</div>
+          <div className={"About_box"} style={{marginTop:"90px"}}>
+            <div className={"skillcontent"} >
+              <div> 기술스택</div>
+              <div>
+                <Image
+                  src="/frontskill.png"
+                  alt="frontskill"
+                  width="230"
+                  height="400"
+                />
+              </div>
+            </div>
+
+            <div className={"skillcontent"}>
+              <div>공부중</div>
+              <div>
+                <Image
+                  src="/studing.png"
+                  alt="frontskill"
+                  width="400"
+                  height="140"
+                />
+              </div>
+            </div>
+          </div>
         </article>
+
+        {/* 블로그/깃헙 */}
         <article className={"Box"}>
           <div className={"title"}> ARCHIVING</div>
           <div> 블로그/ 깃허브</div>
@@ -95,7 +124,7 @@ export default function Home() {
             .Box {
               width: 100%;
               max-width: 72.25rem;
-              padding: 4rem 2rem;
+              padding: 2rem 2rem;
               margin: 0 auto;
             }
 
@@ -103,13 +132,15 @@ export default function Home() {
               display: flex;
               flex-direction: row;
               flex-wrap: wrap;
-              justify-content: space-between;
+              justify-content: space-around;
             }
             .About_me_card {
               display: flex;
               flex-direction: row;
               line-height: 2.3rem;
-              margin: 4rem 4rem 0px 4rem;
+              min-width: 300px;
+              margin: 3rem 0px 0px 7rem;
+        
             }
             .About_icon {
               margin-right: 2rem;
