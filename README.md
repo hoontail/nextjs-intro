@@ -25,6 +25,10 @@ Next.js에 대한 이해와 포트폴리오 제작을 위해 진행해본 프로
 
 <br><br>
 
+Meta tag 추가 및 Google Search Cnsole에 등록해봄
+구글에 hoontail-portfolio 검색시 아무런 결과가 나오지 않았으나, 현재는 나오게 됨.
+<br><br>
+
 🔨 Technology Stack(s)<br><br>
 Frontend : Next.js<br>
 Deployment : AWS S3, cloudfront<br>
