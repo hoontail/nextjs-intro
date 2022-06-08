@@ -3,7 +3,7 @@
 📌 Summary<br><br>
 포트폴리오 용도로 제작한 웹사이트입니다.
 
-Next.js 공부를 통해 제작해 보았고, 그 과정에서 서버 사이드 렌더링을 함께 지원하는 Next.js의 위대함을 느낄 수 있었습니다.  CI/CD 환경 구축 및 cloudfront를 통한 https 배포 또한 진행하여 경험 할 수 있었습니다.<br><br>
+Next.js 공부를 통해 제작해 보았고, 그 과정에서 서버 사이드 렌더링을 함께 지원하는 Next.js의 위대함을 느낄 수 있었습니다. github action을 통한  CI/CD 환경 구축 및 cloudfront를 통한 https 배포 또한 진행하여 경험 할 수 있었습니다.<br><br>
 
 * 주요 기능<br>
  간단한 자기소개<br>
