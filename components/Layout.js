@@ -6,7 +6,7 @@ export default function Layout({ children }) {
     <>
 
       <Head>
-        <title> LTH`s Portfolio</title>
+        <title>hoontail`s Portfolio</title>
       </Head>
       <div>{children}</div>
     </>

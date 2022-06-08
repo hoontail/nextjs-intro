@@ -3,34 +3,67 @@ import { useState } from "react";
 export default function Home() {
   return (
     <div>
-      <section className={"Head"}>LTH`s Portfolio</section>
+      <section className={"Head"}>hoontail`s Portfolio</section>
       <article className={"intro"}>
-        <span className={"title"}>ㅇㅇㅇ 하는 개발자</span>
-        <div>안녕하세요  </div>
+        <div className={"title"}>ㅇㅇㅇ 하는 개발자</div>
+        <div>안녕하세요 </div>
         <div> ㅇㅇㅇㅇ 입니다</div>
         <div>저는 ㅇㅇㅇㅇ</div>
         <button> 알아보기!</button>
       </article>
       <article className={"Box"}>
-      <span className={"title"}>  ABOUT ME</span>
-        <div> 이름/생년월일/연락처/이메일</div>
+        <div className={"title"}> ABOUT ME</div>
+        <div className={"About_box"}>
+          <div>
+            <div className={"About_me_card"}>
+              <div className={"About_icon"}> 아이콘</div>
+              <div>
+                <div className={"About_title"}> 이름</div>
+                <div className={"About_desc"}> 이태훈</div>
+              </div>
+            </div>
+            <div className={"About_me_card"}>
+              <div className={"About_icon"}> 아이콘</div>
+              <div>
+                <div className={"About_title"}> 생년월일</div>
+                <div className={"About_desc"}> 94.04.02</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className={"About_me_card"}>
+              <div className={"About_icon"}> 아이콘</div>
+              <div>
+                <div className={"About_title"}> 이메일</div>
+                <div className={"About_desc"}> sper456@naver.com</div>
+              </div>
+            </div>
+            <div className={"About_me_card"}>
+              <div className={"About_icon"}> 아이콘</div>
+              <div>
+                <div className={"About_title"}> 연락처</div>
+                <div className={"About_desc"}> 010-6646-6904</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </article>
       <article className={"Box"}>
-      <span className={"title"}>  SKILLS</span>
+        <div className={"title"}> SKILLS</div>
         <div> 기술스택</div>
       </article>
       <article className={"Box"}>
-      <span className={"title"}>  ARCHIVING</span>
+        <div className={"title"}> ARCHIVING</div>
         <div> 블로그/ 깃허브</div>
       </article>
       <article className={"Box"}>
-      <span className={"title"}>  PROJECTS</span>
+        <div className={"title"}> PROJECTS</div>
         <div> 프로젝트 경험</div>
       </article>
-      <footer/>
+      <footer />
       <style jsx>
         {`
-        .Head {
+          .Head {
             color: #191919;
             font-size: 24px;
             padding: 16px 24px;
@@ -45,14 +78,10 @@ export default function Home() {
             color: brown;
             display: flex;
             justify-content: center;
-            font-size: 32px;
+            font-size: 40px;
             font-weight: 900;
           }
-          img {
-            width: 100%;
-            height: 500px;
-          }
-     
+
           .intro {
             padding: 3rem;
             background-color: #fafafa;
@@ -61,7 +90,32 @@ export default function Home() {
             align-items: center;
           }
           .Box {
-            padding:3rem;
+            width: 100%;
+            max-width: 72.25rem;
+            padding: 4rem 2rem;
+            margin: 0 auto;
+          }
+
+          .About_box {
+            display: flex;
+            flex-direction: row;
+            flex-wrap:wrap;
+            justify-content: space-between;
+          }
+          .About_me_card {
+            display: flex;
+            flex-direction: row;
+            line-height: 2.3rem;
+            margin: 4rem 4rem 0px 4rem;
+            
+          }
+          .About_icon {
+            margin-right: 2rem;
+          }
+
+          .About_title {
+            font-size: 20px;
+            font-weight: 700;
           }
         `}
       </style>
