@@ -1,16 +1,10 @@
-import Head from "next/head";
+
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>hoontail`s Portfolio</title>
-        <meta
-          name="description"
-          content="신입 프론트앤드 개발자 이태훈 포트폴리오 페이지 입니다"
-        />
-      </Head>
-      <div>
+
+      <main>
         <h1 className={"Head"}>hoontail`s Portfolio</h1>
         <article className={"intro"}>
           <div className={"title"}>ㅇㅇㅇ 하는 개발자</div>
@@ -127,7 +121,7 @@ export default function Home() {
             }
           `}
         </style>
-      </div>
+      </main>
     </>
   );
 }
