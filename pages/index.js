@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -59,7 +58,7 @@ export default function Home() {
             <div className={"skillcontent"} >
               <div> 기술스택</div>
               <div>
-                <Image
+                <img
                   src="/frontskill.png"
                   alt="frontskill"
                   width="230"
@@ -71,7 +70,7 @@ export default function Home() {
             <div className={"skillcontent"}>
               <div>공부중</div>
               <div>
-                <Image
+                <img
                   src="/studing.png"
                   alt="frontskill"
                   width="400"
