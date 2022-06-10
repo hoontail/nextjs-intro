@@ -1,9 +1,10 @@
 
+
 export default function Home() {
   return (
     <>
       <main>
-        <h1 className={"Head"}>hoontail`s Portfolio</h1>
+      
         <article className={"intro"}>
           <div className={"title"}>ㅇㅇㅇ 하는 개발자</div>
           <div>안녕하세요 </div>
@@ -93,17 +94,7 @@ export default function Home() {
         <footer />
         <style jsx>
           {`
-            .Head {
-              color: #191919;
-              font-size: 24px;
-              padding: 16px 24px;
-              font-weight: bold;
-              border-bottom: 1px solid #ccc;
-              margin: 0px;
-            }
-            .Head:hover {
-              color: brown;
-            }
+       
 
             .title {
               color: brown;
@@ -131,13 +122,13 @@ export default function Home() {
               display: flex;
               flex-direction: row;
               flex-wrap: wrap;
-              justify-content: space-around;
+              justify-content: space-between;
             }
             .About_me_card {
               display: flex;
               flex-direction: row;
               line-height: 2.3rem;
-              min-width: 300px;
+              min-width: 250px;
               margin: 3rem 0px 0px 7rem;
         
             }
@@ -149,9 +140,13 @@ export default function Home() {
               font-size: 20px;
               font-weight: 700;
             }
+            .skillcontent{
+          
+            }
           `}
         </style>
       </main>
     </>
   );
 }
+

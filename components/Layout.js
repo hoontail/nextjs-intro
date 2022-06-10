@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Top from "./BlogHead";
 
 export default function Layout({ children }) {
   return (
@@ -20,8 +21,10 @@ export default function Layout({ children }) {
         />
         <meta property="og:url" content="https://www.hoontail-portfolio.com" />
       </Head>
-
+      <Top/>
       <div>{children}</div>
+ 
+   
     </>
   );
 }
