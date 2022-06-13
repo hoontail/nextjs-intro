@@ -102,6 +102,7 @@ export default function Home() {
               justify-content: center;
               font-size: 40px;
               font-weight: 900;
+              margin: 2rem 0px;
             }
 
             .intro {
