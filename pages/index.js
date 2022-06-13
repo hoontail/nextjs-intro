@@ -1,18 +1,37 @@
-
+import Projectslider from "../components/Project";
 
 export default function Home() {
   return (
     <>
       <main>
-      
-        <article className={"intro"}>
-          <div className={"title"}>ㅇㅇㅇ 하는 개발자</div>
+        <img src="/headimg.png" alt="headimg" width="100%" height="600"
+         style={{verticalAlign: "bottom"}}
+         
+        />
+
+        <section>
+          <div className={"intro_title"}>
+            HOONTAIL'S <br />
+            PORTFOLIO
+          </div>
+          <div className={"intro_intro"}>
+            안녕하세요 미래를 항해하는 <br /> 개발자 
+            <span style={{ fontWeight: "700" }}> 이태훈</span> 입니다
+          </div>
+        </section>
+
+
+        <section className={"profile_bar"}>
+          <div>dd</div>
+        </section>
+
+        <article className={"intro_profile"}>
           <div>안녕하세요 </div>
           <div> ㅇㅇㅇㅇ 입니다</div>
           <div>저는 ㅇㅇㅇㅇ</div>
           <button> 알아보기!</button>
         </article>
-        
+
         {/* 프로필 */}
         <article className={"Box"}>
           <div className={"title"}> ABOUT ME</div>
@@ -53,16 +72,16 @@ export default function Home() {
         </article>
 
         {/* 기술스택 */}
-        <article className={"Box"} >
+        <article className={"Box"}>
           <div className={"title"}> SKILLS</div>
-          <div className={"About_box"} style={{marginTop:"90px"}}>
-            <div className={"skillcontent"} >
+          <div className={"About_box"} style={{ marginTop: "90px" }}>
+            <div className={"skillcontent"}>
               <div> 기술스택</div>
               <div>
                 <img
                   src="/frontskill.png"
                   alt="frontskill"
-                  width="230"
+                  width="100%"
                   height="400"
                 />
               </div>
@@ -74,7 +93,7 @@ export default function Home() {
                 <img
                   src="/studing.png"
                   alt="frontskill"
-                  width="400"
+                  width="100%"
                   height="140"
                 />
               </div>
@@ -90,11 +109,40 @@ export default function Home() {
         <article className={"Box"}>
           <div className={"title"}> PROJECTS</div>
           <div> 프로젝트 경험</div>
+          <Projectslider />
         </article>
         <footer />
         <style jsx>
           {`
-       
+            .intro_title {
+              position: absolute;
+              top: 10rem;
+              left: 8rem;
+              color: white;
+              font-size: 72px;
+              line-height: 72px;
+              letter-spacing: -1px;
+              font-weight: 700;
+              font-family: "Gmarket Sans";
+            }
+
+            .intro_intro {
+              position: absolute;
+              top: 22rem;
+              left: 8rem;
+              color: white;
+              font-size: 22px;
+              line-height: 32px;
+              letter-spacing: -1px;
+
+              font-family: "Gmarket Sans";
+            }
+
+            .profile_bar {
+              background-color: #3482F4;
+              padding: 13px;
+              color: white;
+            }
 
             .title {
               color: brown;
@@ -105,7 +153,7 @@ export default function Home() {
               margin: 2rem 0px;
             }
 
-            .intro {
+            .intro_profile {
               padding: 3rem;
               background-color: #fafafa;
               display: flex;
@@ -131,7 +179,6 @@ export default function Home() {
               line-height: 2.3rem;
               min-width: 250px;
               margin: 3rem 0px 0px 7rem;
-        
             }
             .About_icon {
               margin-right: 2rem;
@@ -141,8 +188,7 @@ export default function Home() {
               font-size: 20px;
               font-weight: 700;
             }
-            .skillcontent{
-          
+            .skillcontent {
             }
           `}
         </style>
@@ -150,4 +196,3 @@ export default function Home() {
     </>
   );
 }
-

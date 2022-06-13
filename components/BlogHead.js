@@ -14,12 +14,13 @@ export default function Top() {
           </Link>
         </div>
       ) : (
-        <div className={"Head"}>
-        <h1 className={"Head_title"}>hoontail`s Portfolio</h1>
-        <Link href={"/BlogMain"}>
-          <button> 블로그 </button>
-        </Link>
-      </div>
+      //   <div className={"Head"}>
+      //   <h1 className={"Head_title"}>hoontail`s Portfolio</h1>
+      //   <Link href={"/BlogMain"}>
+      //     <button> 블로그 </button>
+      //   </Link>
+      // </div>
+      null
       )}
       <style jsx>
         {`
