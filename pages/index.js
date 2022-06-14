@@ -135,7 +135,7 @@ export default function Home() {
                 <div className={"skillcontent"} style={{paddingBottom:"10px"}}>I'm studing</div>
                 <img
                   src="/studing.png"
-                  alt="studing"
+                  alt="studing1"
                   width="100%"
                   height="140"
                 />
