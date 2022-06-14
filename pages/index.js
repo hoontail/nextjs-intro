@@ -12,6 +12,7 @@ export default function Home() {
     <>
       <main>
         <img
+        className={"headimg"}
           src="/headimg.png"
           alt="headimg"
           width="100%"
@@ -64,7 +65,7 @@ export default function Home() {
 
         <article className={"intro_profile"}>
           <img src="/is_me_ca.png" alt="headimg" width="150" height="150" />
-          <div style={{ marginLeft: "25px" }}>
+          <div >
             <div
               style={{ fontWeight: "800", fontSize: "16px", marginLeft: "5px" }}
             >
@@ -82,7 +83,7 @@ export default function Home() {
                       style={
                         keyword === index
                           ? { backgroundColor: "#3482f4", color: "#fff" }
-                          : {  }
+                          : {}
                       }
                     >
                       {k.keyword}
@@ -102,26 +103,41 @@ export default function Home() {
 
         {/* 기술스택 */}
         <article className={"Box"}>
-          <div className={"title"}> SKILLS</div>
-          <div className={"About_box"} style={{ marginTop: "90px" }}>
-            <div className={"skillcontent"}>
-              <div> 기술스택</div>
-              <div>
+          <div className={"About_box"} style={{ marginTop: "60px" }}>
+            <div>
+              <div className={"skill_Box"}>
+                <div className={"skillcontent"} style={{marginBottom:"35px"}}>
+                  신입 프론트앤드 개발자 <span>아이콘</span>
+                  <br /> 이태훈 입니다!
+                </div>
+                <div className={"is_me_content"}>
+                  새로운 것에 대한 도전에 즐거움을 느끼며, 개발을 통해 주변의
+                
+                  불편함을 해결하고 의미있는 가치를 창출 할 줄 아는 개발자를
+             
+                  꿈꾸고 있습니다.
+                </div>
+              </div>
+            </div>
+            <span className={"line"}></span>
+            <div>
+              <div className={"skill_Box"}>
+                <div className={"skillcontent"}> My Skills</div>
                 <img
                   src="/frontskill.png"
                   alt="frontskill"
                   width="100%"
-                  height="400"
+                  height="300"
                 />
               </div>
             </div>
-
-            <div className={"skillcontent"}>
-              <div>공부중</div>
-              <div>
+            <span className={"line"}></span>
+            <div>
+              <div className={"skill_Box"} >
+                <div className={"skillcontent"} style={{paddingBottom:"10px"}}>I'm studing</div>
                 <img
                   src="/studing.png"
-                  alt="frontskill"
+                  alt="studing"
                   width="100%"
                   height="140"
                 />
@@ -175,20 +191,13 @@ export default function Home() {
               flex-direction: row;
               justify-content: center;
             }
+
+
             .icon {
               display: flex;
               flex-direction: row;
             }
-            @media screen and (max-width: 1156px) {
-              .icon {
-                display: none;
-              }
-            }
-            @media screen and (max-width: 754px) {
-              .profile_bar {
-                display: none;
-              }
-            }
+
 
             .profile_intro {
               display: flex;
@@ -230,27 +239,37 @@ export default function Home() {
               position: absolute;
               margin: 65px 0px 0px 8px;
             }
-            .title {
-              color: brown;
-              display: flex;
-              justify-content: center;
-              font-size: 40px;
-              font-weight: 900;
-              margin: 2rem 0px;
+
+            .skill_Box {
+              padding: 0px 3rem;
+              width:100%;
             }
 
-            .Box {
-              width: 100%;
-              max-width: 72.25rem;
-              padding: 2rem 2rem;
-              margin: 0 auto;
+            .skillcontent {
+              font-size: 24px;
+              font-weight: 800;
+              line-height: 33px;
+              letter-spacing: -1px;
+              margin-top:2rem;
+            }
+            .line {
+              border: 1px dashed #c5c5c5;
+            }
+            .is_me_content {
+              color: #5c5c5c;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 160%; 
+              word-break: keep-all;
+              max-width: 350px;
+
             }
 
             .About_box {
               display: flex;
               flex-direction: row;
               flex-wrap: wrap;
-              justify-content: space-between;
+              justify-content: space-around;
             }
             .About_me_card {
               display: flex;
@@ -267,8 +286,40 @@ export default function Home() {
               font-size: 20px;
               font-weight: 700;
             }
-            .skillcontent {
+
+            @media screen and (max-width: 1156px) {
+              .icon {
+                display: none;
+              }
             }
+            @media screen and (max-width: 1170px) {
+              .line {
+                display: none;
+              }
+            }
+            @media screen and (max-width: 754px) {
+              .profile_bar {
+                display: none;
+              }        
+            }
+            @media screen and (max-width: 628px) {
+              .intro_title{
+                left: 27px;
+                font-size:48px;
+              }
+              .intro_intro{
+                font-size:21px;
+                left: 27px;
+              }
+              .intro_profile{
+                padding: 5rem 0.5rem;
+              }
+              .headimg{
+                height: 530px;
+              }     
+            }
+
+
           `}
         </style>
       </main>
