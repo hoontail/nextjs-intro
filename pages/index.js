@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <main>
         <img
-        className={"headimg"}
+          className={"headimg"}
           src="/headimg.png"
           alt="headimg"
           width="100%"
@@ -65,11 +65,11 @@ export default function Home() {
 
         <article className={"intro_profile"}>
           <img src="/is_me_ca.png" alt="headimg" width="150" height="150" />
-          <div >
+          <div>
             <div
               style={{ fontWeight: "800", fontSize: "16px", marginLeft: "5px" }}
             >
-              제 <span style={{ color: "#3482F4" }}>키워드</span>는요!{" "}
+              제 <span style={{ color: "#3482F4" }}>키워드</span>는요!
             </div>
             <div className={"keword_button_box"}>
               {keyword_content.map((k, index) => {
@@ -103,16 +103,19 @@ export default function Home() {
 
         {/* 기술스택 */}
         <article className={"Box"}>
-          <div className={"About_box"} style={{ marginTop: "60px" }}>
+          <div className={"Wrap_box"} style={{ marginTop: "60px" }}>
             <div>
               <div className={"skill_Box"}>
-                <div className={"skillcontent"} style={{marginBottom:"35px"}}>
+                <div
+                  className={"skillcontent"}
+                  style={{ marginBottom: "35px" }}
+                >
                   신입 프론트앤드 개발자 <span>아이콘</span>
                   <br /> 이태훈 입니다!
                 </div>
                 <div className={"is_me_content"}>
-                  새로운 것에 대한 도전에 즐거움을 느끼며, 개발을 통해 주변의        
-                  불편함을 해결하고 의미있는 가치를 창출 할 줄 아는 개발자를         
+                  새로운 것에 대한 도전에 즐거움을 느끼며, 개발을 통해 주변의
+                  불편함을 해결하고 의미있는 가치를 창출 할 줄 아는 개발자를
                   꿈꾸고 있습니다.
                 </div>
               </div>
@@ -131,8 +134,13 @@ export default function Home() {
             </div>
             <span className={"line"}></span>
             <div>
-              <div className={"skill_Box"} >
-                <div className={"skillcontent"} style={{paddingBottom:"10px"}}>I'm studing</div>
+              <div className={"skill_Box"}>
+                <div
+                  className={"skillcontent"}
+                  style={{ paddingBottom: "10px" }}
+                >
+                  I'm studing
+                </div>
                 <img
                   src="/studing.png"
                   alt="studing1"
@@ -146,11 +154,19 @@ export default function Home() {
 
         {/* 블로그/깃헙 */}
         <article className={"Box"}>
-          <div className={"title"}> ARCHIVING</div>
-          <div> 블로그/ 깃허브</div>
+            <div className={"title"}> Archiving</div>
+          <div className={"Wrap_box"}>
+            
+            <div> GitHub</div>
+            <div> 소스코드 저장소 입니다.</div>
+            
+            
+            <div> GitHub</div>
+            <div> 소스코드 저장소 입니다.</div>
+          </div>
         </article>
         <article className={"Box"}>
-          <div className={"title"}> PROJECTS</div>
+          <div className={"title"}> Projects</div>
           <div> 프로젝트 경험</div>
           <Projectslider />
         </article>
@@ -190,13 +206,20 @@ export default function Home() {
               justify-content: center;
             }
 
-
+            .Box {
+              padding: 0 12rem;
+            }
             .icon {
               display: flex;
               flex-direction: row;
             }
 
-
+            .title {
+              font-size: 32px;
+              line-height:40px;
+              font-weight : 700;
+              letter-spacing: 0.1px;
+            }
             .profile_intro {
               display: flex;
               flex-direction: row;
@@ -239,8 +262,8 @@ export default function Home() {
             }
 
             .skill_Box {
-              padding: 0px 3rem;
-              width:100%;
+          
+              width: 100%;
             }
 
             .skillcontent {
@@ -248,7 +271,7 @@ export default function Home() {
               font-weight: 800;
               line-height: 33px;
               letter-spacing: -1px;
-              margin-top:2rem;
+              margin-top: 2rem;
             }
             .line {
               border: 1px dashed #c5c5c5;
@@ -257,13 +280,12 @@ export default function Home() {
               color: #5c5c5c;
               font-weight: 400;
               font-size: 16px;
-              line-height: 160%; 
+              line-height: 160%;
               word-break: keep-all;
               max-width: 350px;
-
             }
 
-            .About_box {
+            .Wrap_box {
               display: flex;
               flex-direction: row;
               flex-wrap: wrap;
@@ -298,26 +320,30 @@ export default function Home() {
             @media screen and (max-width: 754px) {
               .profile_bar {
                 display: none;
-              }        
+              }
+              .Box {
+                padding: 0 5rem;
+              }
             }
             @media screen and (max-width: 628px) {
-              .intro_title{
+              .intro_title {
                 left: 27px;
-                font-size:48px;
+                font-size: 48px;
               }
-              .intro_intro{
-                font-size:21px;
+              .intro_intro {
+                font-size: 21px;
                 left: 27px;
               }
-              .intro_profile{
+              .intro_profile {
                 padding: 5rem 0.5rem;
               }
-              .headimg{
+              .headimg {
                 height: 530px;
-              }     
+              }
+              .Box {
+                padding: 0 1rem;
+              }
             }
-
-
           `}
         </style>
       </main>
