@@ -1,5 +1,6 @@
 import Projectslider from "../components/Project";
 import React, { useState } from "react";
+import Link from "next/link";
 export default function Home() {
   const [keyword, setKeyword] = useState(0);
   const keyword_content = [
@@ -104,8 +105,9 @@ export default function Home() {
         {/* 기술스택 */}
         <article className={"Box"}>
           <div className={"Wrap_box"} style={{ marginTop: "60px" }}>
-            <div>
-              <div className={"skill_Box"}>
+           
+              <div className={"skill_Box"}
+            >
                 <div
                   className={"skillcontent"}
                   style={{ marginBottom: "35px" }}
@@ -118,10 +120,10 @@ export default function Home() {
                   불편함을 해결하고 의미있는 가치를 창출 할 줄 아는 개발자를
                   꿈꾸고 있습니다.
                 </div>
-              </div>
+            
             </div>
             <span className={"line"}></span>
-            <div>
+           
               <div className={"skill_Box"}>
                 <div className={"skillcontent"}> My Skills</div>
                 <img
@@ -131,9 +133,9 @@ export default function Home() {
                   height="300"
                 />
               </div>
-            </div>
+           
             <span className={"line"}></span>
-            <div>
+       
               <div className={"skill_Box"}>
                 <div
                   className={"skillcontent"}
@@ -148,27 +150,64 @@ export default function Home() {
                   height="140"
                 />
               </div>
-            </div>
+           
           </div>
         </article>
 
         {/* 블로그/깃헙 */}
         <article className={"Box"}>
-            <div className={"title"}> Archiving</div>
+          <div className={"title"}> Archiving</div>
           <div className={"Wrap_box"}>
-            
-            <div> GitHub</div>
-            <div> 소스코드 저장소 입니다.</div>
-            
-            
-            <div> GitHub</div>
-            <div> 소스코드 저장소 입니다.</div>
+            <div className={"archiving_box"}>
+             <div>
+                <img
+             
+                  src="/github.png"
+                  alt="github"
+                  width="134px"
+                  height="42px"
+                />
+             </div>
+              <div className={"archiving_content"}>
+              <p style={{margin:"2rem 0"}}> <span style={{fontWeight:"900"}}>소스코드 저장소</span> 입니다.</p>
+              <p>과거 프로젝트,앱의 소스 코드</p>
+              <p>부트캠프 항해 과정에서 배운 소스 코드</p>
+              <p>혼자서 코딩 연습을 위해 저장하던 소스 코드</p>
+              </div>
+              <Link href={"https://github.com/hoontail"}>
+              <button className={"move_btn"}> 바로가기</button></Link>
+           
+            </div>
+           
+           
+            <div className={"line"} />
+           
+           
+            <div className={"archiving_box"} >
+              <div>
+                <img
+          
+                  src="/tstory.png"
+                  alt="tstory"
+               
+                />
+              </div>
+              <div className={"archiving_content"}>
+              <p style={{margin:"2rem 0"}}> <span style={{fontWeight:"900"}}>기록하는 습관</span>을 위한 블로그 입니다.</p>
+              <p>공부한 것을 복습하기 위한 기록</p>
+              <p>웹 관련 지식 정리 및 회고를 통한 기록</p>
+              <p>공유를 통한 선한 영향력 행사</p>
+              </div>
+              <Link href={"https://hoontail.tistory.com/"}>
+              <button className={"move_btn"}> 바로가기</button></Link>
+            </div>
           </div>
         </article>
         <article className={"Box"}>
           <div className={"title"}> Projects</div>
-          <div> 프로젝트 경험</div>
+         <div className={"project_box"}>
           <Projectslider />
+   </div>
         </article>
         <footer />
         <style jsx>
@@ -184,7 +223,8 @@ export default function Home() {
               font-weight: 700;
               font-family: "Gmarket Sans";
             }
-
+          
+        
             .intro_intro {
               position: absolute;
               top: 20.5rem;
@@ -207,7 +247,7 @@ export default function Home() {
             }
 
             .Box {
-              padding: 0 12rem;
+              padding: 0 14rem;
             }
             .icon {
               display: flex;
@@ -216,9 +256,10 @@ export default function Home() {
 
             .title {
               font-size: 32px;
-              line-height:40px;
-              font-weight : 700;
+              line-height: 40px;
+              font-weight: 700;
               letter-spacing: 0.1px;
+              margin: 10rem 0 8rem 0;
             }
             .profile_intro {
               display: flex;
@@ -261,17 +302,16 @@ export default function Home() {
               margin: 65px 0px 0px 8px;
             }
 
-            .skill_Box {
-          
-              width: 100%;
-            }
-
             .skillcontent {
               font-size: 24px;
               font-weight: 800;
               line-height: 33px;
               letter-spacing: -1px;
               margin-top: 2rem;
+            }
+            .skill_Box{
+              max-width: 400px;
+           
             }
             .line {
               border: 1px dashed #c5c5c5;
@@ -289,8 +329,45 @@ export default function Home() {
               display: flex;
               flex-direction: row;
               flex-wrap: wrap;
-              justify-content: space-around;
+              justify-content:space-between;
+             
             }
+
+            .archiving_box {
+              flex-direction: column;
+              min-width:45%;
+              
+    
+            }
+
+            .archiving_content{
+                  color: #373F41;
+              line-height: 20px;
+              letter-spacing: 0.2px;
+              font-size:16px;
+            }
+            .move_btn{
+              margin: 3rem 0 ;
+              color: #3482F4;
+              background-color: #fff;
+              border: 1px solid #3482F4;
+              padding: 10px 18px;
+              font-weight: 700;
+              cursor: pointer;
+            }
+            .move_btn:hover{
+              color: #fff;
+              background-color: #3d84eb;
+            }
+            .project_box{
+              display: flex;
+              flex-direction:row;
+
+
+            }
+
+
+
             .About_me_card {
               display: flex;
               flex-direction: row;
@@ -307,23 +384,38 @@ export default function Home() {
               font-weight: 700;
             }
 
+            @media screen and (max-width: 1803px) {
+              .Box {
+                padding: 0 11rem;
+              }
+            }
+
+
+            @media screen and (max-width: 1170px) {
+              .line {
+                display: none;
+              }
+            }
+
             @media screen and (max-width: 1156px) {
               .icon {
                 display: none;
               }
+              .Box {
+                padding: 0 5rem;
+              }
             }
-            @media screen and (max-width: 1170px) {
-              .line {
-                display: none;
+            @media screen and (max-width: 906px) {
+              .Wrap_box {
+                justify-content: center;
+
               }
             }
             @media screen and (max-width: 754px) {
               .profile_bar {
                 display: none;
               }
-              .Box {
-                padding: 0 5rem;
-              }
+        
             }
             @media screen and (max-width: 628px) {
               .intro_title {
@@ -341,7 +433,14 @@ export default function Home() {
                 height: 530px;
               }
               .Box {
-                padding: 0 1rem;
+                padding: 0 2rem;
+              }
+              .Wrap_box {
+                justify-content: space-between;
+
+              }
+              .title {
+                margin: 5rem 0 3rem 0;
               }
             }
           `}

@@ -14,9 +14,12 @@ const Project = () => {
   };
 
   return (
-    <Slider {...settings} style={{maxWidth:"200px"}}>
+    <Slider {...settings} style={{ maxWidth: "400px" }}>
       <Container>
-        <h3>1</h3>
+        <Box>
+          <img src="/seuchida_02.png" alt="github" width={185} style={{marginRight:"8px"}}/>
+          <img src="/seuchida_03.png" alt="github" width={185} />
+        </Box>
       </Container>
       <Container>
         <h3>2</h3>
@@ -31,7 +34,12 @@ const Project = () => {
 export default Project;
 
 const Container = styled.div`
+  width: 400px;
+  min-height: 400px;
 
-  min-width: 250px;
-  min-height: 250px;
+`;
+
+const Box = styled.div`
+  display: flex;
+  flex-direction: row;
 `;
