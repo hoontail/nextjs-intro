@@ -15,3 +15,17 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.move_btn {
+ 
+  color: #3482f4;
+  background-color: #fff;
+  border: 1px solid #3482f4;
+  padding: 10px 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.move_btn:hover {
+  color: #fff;
+  background-color: #3d84eb;
+}

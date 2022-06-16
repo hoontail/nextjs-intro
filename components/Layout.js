@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Top from "./BlogHead";
+import Footer from "./Footer";
 
 export default function Layout({ children }) {
   return (
@@ -23,7 +24,7 @@ export default function Layout({ children }) {
       </Head>
       <Top/>
       <div>{children}</div>
- 
+    <Footer/>
    
     </>
   );

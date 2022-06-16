@@ -1,6 +1,7 @@
 import Projectslider from "../components/Project";
 import React, { useState } from "react";
 import Link from "next/link";
+import ProfileBar from "../components/ProfileBar";
 export default function Home() {
   const [keyword, setKeyword] = useState(0);
   const keyword_content = [
@@ -33,36 +34,7 @@ export default function Home() {
         </section>
 
         {/* 프로필 bar... 수정 필요 */}
-        <section className={"profile_bar"}>
-          <div className={"profile_intro"}>
-            <div className={"icon"}>
-              <span style={{ marginRight: "6px" }}>아이콘</span>
-              <div>NAME</div>
-            </div>
-            <div style={{ margin: "0px 35px 0px 20px" }}>이태훈</div>
-          </div>
-          <div className={"profile_intro"}>
-            <div className={"icon"}>
-              <span style={{ marginRight: "6px" }}>아이콘</span>
-              <div>E-MAIL</div>
-            </div>
-            <div style={{ margin: "0px 35px 0px 20px" }}>sper456@naver.com</div>
-          </div>
-          <div className={"profile_intro"}>
-            <div className={"icon"}>
-              <span style={{ marginRight: "6px" }}>아이콘</span>
-              <div>Date of birth</div>
-            </div>
-            <div style={{ margin: "0px 35px 0px 20px" }}>94.04.02</div>
-          </div>
-          <div className={"profile_intro"} style={{ border: "none" }}>
-            <div className={"icon"}>
-              <span style={{ marginRight: "6px" }}>아이콘</span>
-              <div>Contact</div>
-            </div>
-            <div style={{ margin: "0px 35px 0px 20px" }}>010-6646-6904</div>
-          </div>
-        </section>
+    <ProfileBar/>
 
         <article className={"intro_profile"}>
           <img src="/is_me_ca.png" alt="headimg" width="150" height="150" />
@@ -105,52 +77,42 @@ export default function Home() {
         {/* 기술스택 */}
         <article className={"Box"}>
           <div className={"Wrap_box"} style={{ marginTop: "60px" }}>
-           
-              <div className={"skill_Box"}
-            >
-                <div
-                  className={"skillcontent"}
-                  style={{ marginBottom: "35px" }}
-                >
-                  신입 프론트앤드 개발자 <span>아이콘</span>
-                  <br /> 이태훈 입니다!
-                </div>
-                <div className={"is_me_content"}>
-                  새로운 것에 대한 도전에 즐거움을 느끼며, 개발을 통해 주변의
-                  불편함을 해결하고 의미있는 가치를 창출 할 줄 아는 개발자를
-                  꿈꾸고 있습니다.
-                </div>
-            
+            <div className={"skill_Box_me"}>
+              <div className={"skillcontent"} style={{ marginBottom: "35px" }}>
+                신입 프론트앤드 개발자 <span>아이콘</span>
+                <br /> 이태훈 입니다!
+              </div>
+              <div className={"is_me_content"}>
+                새로운 것에 대한 도전에 즐거움을 느끼며, 개발을 통해 주변의
+                불편함을 해결하고 의미있는 가치를 창출 할 줄 아는 개발자를
+                꿈꾸고 있습니다.
+              </div>
             </div>
             <span className={"line"}></span>
-           
-              <div className={"skill_Box"}>
-                <div className={"skillcontent"}> My Skills</div>
-                <img
-                  src="/frontskill.png"
-                  alt="frontskill"
-                  width="100%"
-                  height="300"
-                />
-              </div>
-           
+
+            <div className={"skill_Box"}>
+              <div className={"skillcontent"}> My Skills</div>
+              <img
+                src="/frontskill.png"
+                alt="frontskill"
+                width="100%"
+                height="300"
+              />
+            </div>
+
             <span className={"line"}></span>
-       
-              <div className={"skill_Box"}>
-                <div
-                  className={"skillcontent"}
-                  style={{ paddingBottom: "10px" }}
-                >
-                  I'm studing
-                </div>
-                <img
-                  src="/studing.png"
-                  alt="studing1"
-                  width="100%"
-                  height="140"
-                />
+
+            <div className={"skill_Box"}>
+              <div className={"skillcontent"} style={{ paddingBottom: "10px" }}>
+                I'm studing
               </div>
-           
+              <img
+                src="/studing.png"
+                alt="studing1"
+                width="100%"
+                height="140"
+              />
+            </div>
           </div>
         </article>
 
@@ -159,55 +121,74 @@ export default function Home() {
           <div className={"title"}> Archiving</div>
           <div className={"Wrap_box"}>
             <div className={"archiving_box"}>
-             <div>
+              <div>
                 <img
-             
                   src="/github.png"
                   alt="github"
                   width="134px"
                   height="42px"
                 />
-             </div>
+              </div>
               <div className={"archiving_content"}>
-              <p style={{margin:"2rem 0"}}> <span style={{fontWeight:"900"}}>소스코드 저장소</span> 입니다.</p>
-              <p>과거 프로젝트,앱의 소스 코드</p>
-              <p>부트캠프 항해 과정에서 배운 소스 코드</p>
-              <p>혼자서 코딩 연습을 위해 저장하던 소스 코드</p>
+                <p style={{ margin: "2rem 0" }}>
+                  <span style={{ fontWeight: "900" }}>
+                    소스코드 저장소
+                  </span>{" "}
+                  입니다.
+                </p>
+                <p>과거 프로젝트,앱의 소스 코드</p>
+                <p>부트캠프 항해 과정에서 배운 소스 코드</p>
+                <p>혼자서 코딩 연습을 위해 저장하던 소스 코드</p>
               </div>
               <Link href={"https://github.com/hoontail"}>
-              <button className={"move_btn"}> 바로가기</button></Link>
-           
+                <button className={"move_btn"} style={{margin:"3rem 0"}}> 바로가기</button>
+              </Link>
             </div>
-           
-           
+
             <div className={"line"} />
-           
-           
-            <div className={"archiving_box"} >
+
+            <div className={"archiving_box"}>
               <div>
-                <img
-          
-                  src="/tstory.png"
-                  alt="tstory"
-               
-                />
+                <img src="/tstory.png" alt="tstory" />
               </div>
               <div className={"archiving_content"}>
-              <p style={{margin:"2rem 0"}}> <span style={{fontWeight:"900"}}>기록하는 습관</span>을 위한 블로그 입니다.</p>
-              <p>공부한 것을 복습하기 위한 기록</p>
-              <p>웹 관련 지식 정리 및 회고를 통한 기록</p>
-              <p>공유를 통한 선한 영향력 행사</p>
+                <p style={{ margin: "2rem 0" }}>
+                  <span style={{ fontWeight: "900" }}>기록하는 습관</span>을
+                  위한 블로그 입니다.
+                </p>
+                <p>공부한 것을 복습하기 위한 기록</p>
+                <p>웹 관련 지식 정리 및 회고를 통한 기록</p>
+                <p>공유를 통한 선한 영향력 행사</p>
               </div>
               <Link href={"https://hoontail.tistory.com/"}>
-              <button className={"move_btn"}> 바로가기</button></Link>
+                <button className={"move_btn"} style={{margin:"3rem 0"}}> 바로가기</button>
+              </Link>
             </div>
           </div>
         </article>
+
         <article className={"Box"}>
           <div className={"title"}> Projects</div>
-         <div className={"project_box"}>
-          <Projectslider />
-   </div>
+          <div className={"Wrap_box"} >
+          
+              <div  >
+                <Projectslider seuchida_imgslider/>
+              </div>
+              <div>
+                <Projectslider seuchida_intro />
+              </div>
+            
+          </div>
+          <div className={"Wrap_box"} >
+              <div  >
+                <Projectslider portfolio_imgslider/>
+              </div>
+              <div  >
+                <Projectslider portfolio_intro/>
+              </div>
+              
+              
+              </div>
         </article>
         <footer />
         <style jsx>
@@ -223,8 +204,7 @@ export default function Home() {
               font-weight: 700;
               font-family: "Gmarket Sans";
             }
-          
-        
+
             .intro_intro {
               position: absolute;
               top: 20.5rem;
@@ -236,22 +216,8 @@ export default function Home() {
 
               font-family: "Gmarket Sans";
             }
-
-            .profile_bar {
-              background-color: #3482f4;
-              padding: 13px;
-              color: white;
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
-            }
-
             .Box {
-              padding: 0 14rem;
-            }
-            .icon {
-              display: flex;
-              flex-direction: row;
+              padding: 0 16rem;
             }
 
             .title {
@@ -260,14 +226,6 @@ export default function Home() {
               font-weight: 700;
               letter-spacing: 0.1px;
               margin: 10rem 0 8rem 0;
-            }
-            .profile_intro {
-              display: flex;
-              flex-direction: row;
-              min-width: 15%;
-              max-width: 320px;
-              border-right: 1px solid #fff;
-              margin: 0px 20px;
             }
 
             .intro_profile {
@@ -309,9 +267,8 @@ export default function Home() {
               letter-spacing: -1px;
               margin-top: 2rem;
             }
-            .skill_Box{
+            .skill_Box {
               max-width: 400px;
-           
             }
             .line {
               border: 1px dashed #c5c5c5;
@@ -329,59 +286,25 @@ export default function Home() {
               display: flex;
               flex-direction: row;
               flex-wrap: wrap;
-              justify-content:space-between;
-             
+              justify-content: space-between;
+              margin: 8rem 0;
             }
 
             .archiving_box {
               flex-direction: column;
-              min-width:45%;
-              
-    
+              min-width: 45%;
             }
 
-            .archiving_content{
-                  color: #373F41;
+            .archiving_content {
+              color: #373f41;
               line-height: 20px;
               letter-spacing: 0.2px;
-              font-size:16px;
+              font-size: 16px;
             }
-            .move_btn{
-              margin: 3rem 0 ;
-              color: #3482F4;
-              background-color: #fff;
-              border: 1px solid #3482F4;
-              padding: 10px 18px;
-              font-weight: 700;
-              cursor: pointer;
-            }
-            .move_btn:hover{
-              color: #fff;
-              background-color: #3d84eb;
-            }
-            .project_box{
-              display: flex;
-              flex-direction:row;
-
-
-            }
-
-
-
-            .About_me_card {
+      
+            .project_box {
               display: flex;
               flex-direction: row;
-              line-height: 2.3rem;
-              min-width: 250px;
-              margin: 3rem 0px 0px 7rem;
-            }
-            .About_icon {
-              margin-right: 2rem;
-            }
-
-            .About_title {
-              font-size: 20px;
-              font-weight: 700;
             }
 
             @media screen and (max-width: 1803px) {
@@ -389,7 +312,6 @@ export default function Home() {
                 padding: 0 11rem;
               }
             }
-
 
             @media screen and (max-width: 1170px) {
               .line {
@@ -405,17 +327,10 @@ export default function Home() {
                 padding: 0 5rem;
               }
             }
-            @media screen and (max-width: 906px) {
-              .Wrap_box {
-                justify-content: center;
-
-              }
-            }
             @media screen and (max-width: 754px) {
               .profile_bar {
                 display: none;
               }
-        
             }
             @media screen and (max-width: 628px) {
               .intro_title {
@@ -437,7 +352,6 @@ export default function Home() {
               }
               .Wrap_box {
                 justify-content: space-between;
-
               }
               .title {
                 margin: 5rem 0 3rem 0;
