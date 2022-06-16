@@ -5,8 +5,18 @@ import ProfileBar from "../components/ProfileBar";
 export default function Home() {
   const [keyword, setKeyword] = useState(0);
   const keyword_content = [
-    { id: 0, keyword: "ddd", content: "blabla" },
-    { id: 1, keyword: "aaa", content: "clacla" },
+    {
+      id: 0,
+      keyword: "비전",
+      content:
+        "새로운 것에 대한 도전에 즐거움을 느끼며, 개발을 통해 주변의 불편함을 해결하고 의미있는 가치를 창출 할 줄 아는 개발자를 꿈꾸고 있습니다. ",
+    },
+    {
+      id: 1,
+      keyword: "무거운",
+      content:
+        "컴퓨터 앞에서 주당 100시간을 투자 할 수 있는 엉덩이가 무거운 개발잡니다. ",
+    },
     { id: 2, keyword: "www", content: "chocho" },
   ];
 
@@ -34,7 +44,7 @@ export default function Home() {
         </section>
 
         {/* 프로필 bar... 수정 필요 */}
-    <ProfileBar/>
+        <ProfileBar />
 
         <article className={"intro_profile"}>
           <img src="/is_me_ca.png" alt="headimg" width="150" height="150" />
@@ -83,9 +93,16 @@ export default function Home() {
                 <br /> 이태훈 입니다!
               </div>
               <div className={"is_me_content"}>
-                새로운 것에 대한 도전에 즐거움을 느끼며, 개발을 통해 주변의
-                불편함을 해결하고 의미있는 가치를 창출 할 줄 아는 개발자를
-                꿈꾸고 있습니다.
+                <img
+                  className={"study_img"}
+                  src="/hanghae_01.png"
+                  alt="studing1"
+                  width="100%"
+                  height="140"
+                />
+                항해 부트캠프를 통해 매 주 새로운 팀원들과 100시간씩 투자하고,
+                매일을 기록하여 협업 능력, 기록하는 습관 및 공부의 자세를
+                갖췄습니다.
               </div>
             </div>
             <span className={"line"}></span>
@@ -93,6 +110,7 @@ export default function Home() {
             <div className={"skill_Box"}>
               <div className={"skillcontent"}> My Skills</div>
               <img
+                className={"skill_img"}
                 src="/frontskill.png"
                 alt="frontskill"
                 width="100%"
@@ -107,6 +125,7 @@ export default function Home() {
                 I'm studing
               </div>
               <img
+                className={"study_img"}
                 src="/studing.png"
                 alt="studing1"
                 width="100%"
@@ -131,9 +150,7 @@ export default function Home() {
               </div>
               <div className={"archiving_content"}>
                 <p style={{ margin: "2rem 0" }}>
-                  <span style={{ fontWeight: "900" }}>
-                    소스코드 저장소
-                  </span>{" "}
+                  <span style={{ fontWeight: "900" }}>소스코드 저장소</span>{" "}
                   입니다.
                 </p>
                 <p>과거 프로젝트,앱의 소스 코드</p>
@@ -141,7 +158,10 @@ export default function Home() {
                 <p>혼자서 코딩 연습을 위해 저장하던 소스 코드</p>
               </div>
               <Link href={"https://github.com/hoontail"}>
-                <button className={"move_btn"} style={{margin:"3rem 0"}}> 바로가기</button>
+                <button className={"move_btn"} style={{ margin: "3rem 0" }}>
+                  {" "}
+                  바로가기
+                </button>
               </Link>
             </div>
 
@@ -161,7 +181,10 @@ export default function Home() {
                 <p>공유를 통한 선한 영향력 행사</p>
               </div>
               <Link href={"https://hoontail.tistory.com/"}>
-                <button className={"move_btn"} style={{margin:"3rem 0"}}> 바로가기</button>
+                <button className={"move_btn"} style={{ margin: "3rem 0" }}>
+                  {" "}
+                  바로가기
+                </button>
               </Link>
             </div>
           </div>
@@ -169,26 +192,30 @@ export default function Home() {
 
         <article className={"Box"}>
           <div className={"title"}> Projects</div>
-          <div className={"Wrap_box"} >
-          
-              <div  >
-                <Projectslider seuchida_imgslider/>
-              </div>
-              <div>
-                <Projectslider seuchida_intro />
-              </div>
-            
+          <div className={"Wrap_box"}>
+            <div>
+              <Projectslider seuchida_imgslider />
+            </div>
+            <div>
+              <Projectslider seuchida_intro />
+            </div>
           </div>
-          <div className={"Wrap_box"} >
-              <div  >
-                <Projectslider portfolio_imgslider/>
-              </div>
-              <div  >
-                <Projectslider portfolio_intro/>
-              </div>
-              
-              
-              </div>
+          <div className={"Wrap_box"}>
+            <div>
+              <Projectslider clone_imgslider />
+            </div>
+            <div>
+              <Projectslider clone_intro />
+            </div>
+          </div>
+          <div className={"Wrap_box"}>
+            <div>
+              <Projectslider portfolio_imgslider />
+            </div>
+            <div>
+              <Projectslider portfolio_intro />
+            </div>
+          </div>
         </article>
         <footer />
         <style jsx>
@@ -258,6 +285,9 @@ export default function Home() {
             .key_content {
               position: absolute;
               margin: 65px 0px 0px 8px;
+              max-width: 550px;
+              line-height: 25.6px;
+              padding-right: 20px;
             }
 
             .skillcontent {
@@ -301,7 +331,7 @@ export default function Home() {
               letter-spacing: 0.2px;
               font-size: 16px;
             }
-      
+
             .project_box {
               display: flex;
               flex-direction: row;
@@ -313,6 +343,14 @@ export default function Home() {
               }
             }
 
+            @media screen and (max-width: 1467px) {
+              .study_img {
+                width: 320px;
+              }
+              .skill_img {
+                width: 330px;
+              }
+            }
             @media screen and (max-width: 1170px) {
               .line {
                 display: none;
@@ -325,6 +363,11 @@ export default function Home() {
               }
               .Box {
                 padding: 0 5rem;
+              }
+            }
+            @media screen and (max-width: 906px) {
+              .intro_profile {
+                padding: 5rem 3rem;
               }
             }
             @media screen and (max-width: 754px) {
@@ -352,9 +395,13 @@ export default function Home() {
               }
               .Wrap_box {
                 justify-content: space-between;
+                margin: 3rem 0;
               }
               .title {
-                margin: 5rem 0 3rem 0;
+                margin: 0;
+              }
+              .key_content {
+                font-size: 12px;
               }
             }
           `}

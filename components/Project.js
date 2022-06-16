@@ -101,11 +101,11 @@ const Project = (props) => {
                 KaKao Map API와 geolocation을 활용 하여 실시간 위치 및
                 게시글과의 거리를 시각적 확인 및 거리 표시
               </li>
-              <li> 메인 페이지 및 상세,모든 리스트 페이지 구현</li>{" "}
               <li>
                 browser-image-compression 라이브러리를 활용한 이미지 리사이징
                 -&gt; 렌더링 속도 개선
               </li>
+              <li> 메인 페이지 및 상세,모든 리스트 페이지, 채팅,내주변 페이지 구현</li>
               <li>PWA 적용으로 모바일 환경 최적화</li>
               <li>
                 120명의 유저에 대한 피드백 개선 -&gt; 앱의 특성상 주변 게시글
@@ -134,6 +134,80 @@ const Project = (props) => {
     );
   }
 
+  // 클론 프로젝트 이미지
+  if (props.clone_imgslider) {
+    return (
+      <>
+        <StyledImgSlider {...settings}>
+          <Container>
+            <Box>
+              <Seuchida src="/air_02.png" alt="airclone" />
+            </Box>
+          </Container>
+          <Container>
+            <Box>
+              <Seuchida src="/air_04.png" alt="airclone" />
+            </Box>
+          </Container>
+          <Container>
+            <Box>
+              <Seuchida src="/air_03.png" alt="airclone" />
+            </Box>
+          </Container>
+          <Container>
+            <Box>
+              <Seuchida src="/air_01.png" alt="airclone" />
+            </Box>
+          </Container>
+          <Container>
+            <Box>
+              <Seuchida src="/air_05.png" alt="airclone" />
+            </Box>
+          </Container>
+        </StyledImgSlider>
+      </>
+    );
+  }
+  //   클론 프로젝트 설명
+  if (props.clone_intro) {
+    return (
+      <>
+        <StyledSlider {...settings}>
+          <IntroBox>
+            <ProjectTitle>에어 비앤비 클론코딩 </ProjectTitle>
+            <Bluetag>About</Bluetag>
+            <div>
+            1주일간 진행 했던 airBnB 클론 코딩 입니다.
+            댓글 CRUD, 스크롤 이벤트, 검색기능, position sticky를 활용 해 보았으며, 뷰 작업을 섬세하게 다루는 경험을 해보았습니다.
+            </div>
+            <Bluetag>개발기간</Bluetag>
+            <span> 22.05~22.05 , 일주일</span>
+          </IntroBox>
+          <IntroBox>
+            <Bluetag>역할</Bluetag>
+            <ul>
+              <li>댓글 CRUD 및 검색기능 구현</li>
+              <li>
+                kakao map API를 활용한 게시글 위치 표시
+              </li>
+              <li> 스크롤 이벤트를 통한 navigation bar 생성 및 클릭시 이동</li>
+              <li>섬세한 뷰 작업</li>
+              <li>반응형 웹 사이트 제작</li>
+            </ul>
+            <Bluetag>기술</Bluetag>
+            <Box>
+              <div>React, Redux, KaKaoMap, AWS S3</div>
+              <Link href={"https://github.com/cloneMini/cloneNewFE"}>
+                <button className={"move_btn"} style={{ margin: "0 2rem" }}>
+                  Github
+                </button>
+              </Link>
+            </Box>
+          </IntroBox>
+        </StyledSlider>
+      </>
+    );
+  }
   // 포트폴리오 프로젝트 이미지
   if (props.portfolio_imgslider) {
     return (
@@ -184,8 +258,8 @@ const Project = (props) => {
             <Bluetag>기술</Bluetag>
             <Box>
               <div>Next.Js, Github Actions, AWS S3</div>
-              <Link href={"https://github.com/seuchida/seuchida_FE"}>
-                <button className={"move_btn"} style={{ margin: "0 3rem" }}>
+              <Link href={"https://github.com/hoontail/nextjs-intro"}>
+                <button className={"move_btn"} style={{ margin: "0 2rem" }}>
                   Github
                 </button>
               </Link>
