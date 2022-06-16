@@ -72,7 +72,7 @@ const Project = (props) => {
         <StyledSlider {...settings}>
           <IntroBox>
             <ProjectTitle>스치다!</ProjectTitle>{" "}
-            <span>위치 기반 운동친구 찾기 서비스</span>
+            <div style={{marginTop:"4px"}}>위치 기반 운동친구 찾기 서비스</div>
             <Bluetag> About</Bluetag>
             <div>
               개발자 6명 디자이너2명, 총 8명의 팀프로젝트의 리더를 맡아

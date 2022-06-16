@@ -100,9 +100,10 @@ export default function Home() {
                   width="100%"
                   height="140"
                 />
+                <div style={{marginTop:"8px"}}>
                 항해 부트캠프를 통해 매 주 새로운 팀원들과 100시간씩 투자하고,
                 매일을 기록하여 협업 능력, 기록하는 습관 및 공부의 자세를
-                갖췄습니다.
+                갖췄습니다.</div>
               </div>
             </div>
             <span className={"line"}></span>
@@ -159,7 +160,6 @@ export default function Home() {
               </div>
               <Link href={"https://github.com/hoontail"}>
                 <button className={"move_btn"} style={{ margin: "3rem 0" }}>
-                  {" "}
                   바로가기
                 </button>
               </Link>
@@ -182,7 +182,6 @@ export default function Home() {
               </div>
               <Link href={"https://hoontail.tistory.com/"}>
                 <button className={"move_btn"} style={{ margin: "3rem 0" }}>
-                  {" "}
                   바로가기
                 </button>
               </Link>
@@ -402,6 +401,9 @@ export default function Home() {
               }
               .key_content {
                 font-size: 12px;
+              }
+              .keword_button{
+                font-size: 11px;
               }
             }
           `}
