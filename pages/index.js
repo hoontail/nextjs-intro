@@ -100,8 +100,8 @@ export default function Home() {
               <div className={"is_me_content"}>
                 <img
                   className={"study_img"}
-                  src="/hanghae_01.png"
-                  alt="studingimg"
+                  src="/hanghae_01.PNG"
+                  alt="hanghae"
                   width="100%"
                   height="140"
                   
