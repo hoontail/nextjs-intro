@@ -19,44 +19,44 @@ const Project = (props) => {
         <StyledImgSlider {...settings}>
           <Container>
             <Box>
-              <Seuchida src="/seuchida_01.png" alt="github" />
+              <Seuchida src="/seuchida_01.png" alt="seuchida" />
             </Box>
           </Container>
           <Container>
             <Box>
               <ImageBox
-                src="/seuchida_02.png"
-                alt="github"
+                src="/seuchida_02.PNG"
+                alt="seuchida"
                 style={{ marginRight: "12px" }}
               />
-              <ImageBox src="/seuchida_03.png" alt="github" />
+              <ImageBox src="/seuchida_03.PNG" alt="seuchida" />
             </Box>
           </Container>
           <Container>
             <Box>
               <ImageBox
-                src="/seuchida_04.png"
-                alt="github"
+                src="/seuchida_04.PNG"
+                alt="seuchida"
                 style={{ marginRight: "12px" }}
               />
-              <ImageBox src="/seuchida_05.png" alt="github" />
+              <ImageBox src="/seuchida_05.PNG" alt="seuchida" />
             </Box>
           </Container>
           <Container>
             <Box>
               <ImageBox
-                src="/seuchida_06.png"
-                alt="github"
+                src="/seuchida_06.PNG"
+                alt="seuchida"
                 style={{ marginRight: "12px" }}
               />
-              <ImageBox src="/seuchida_07.png" alt="github" />
+              <ImageBox src="/seuchida_07.PNG" alt="seuchida" />
             </Box>
           </Container>
           <Container>
             <Box>
               <ImageBox
-                src="/seuchida_08.png"
-                alt="github"
+                src="/seuchida_08.PNG"
+                alt="seuchida"
                 style={{ marginRight: "12px" }}
               />
             </Box>
@@ -215,12 +215,12 @@ const Project = (props) => {
         <StyledImgSlider {...settings}>
           <Container>
             <Box>
-              <Seuchida src="/port_01.png" alt="github" />
+              <Seuchida src="/port_01.PNG" alt="portfolio" />
             </Box>
           </Container>
           <Container>
             <Box>
-              <Seuchida src="/port_02.png" alt="github" />
+              <Seuchida src="/port_02.PNG" alt="portfolio" />
             </Box>
           </Container>
         </StyledImgSlider>
