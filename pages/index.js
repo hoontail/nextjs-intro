@@ -1,9 +1,13 @@
 import Projectslider from "../components/Project";
-import React, { useState } from "react";
+import React, { useState , useRef} from "react";
 import Link from "next/link";
 import ProfileBar from "../components/ProfileBar";
+import ScrollEffect from "../components/ScrollEffect";
 export default function Home() {
+  const profileRef = useRef(null);
+  console.log(profileRef)
   const [keyword, setKeyword] = useState(0);
+  const scrollToElement = () => profileRef?.current?.scrollIntoView();
   const keyword_content = [
     {
       id: 0,
@@ -22,6 +26,7 @@ export default function Home() {
 
   return (
     <>
+    <ScrollEffect/>
       <main>
         <img
           className={"headimg"}
@@ -46,8 +51,8 @@ export default function Home() {
         {/* 프로필 bar... 수정 필요 */}
         <ProfileBar />
 
-        <article className={"intro_profile"}>
-          <img src="/is_me_ca.png" alt="headimg" width="150" height="150" />
+        <article className={"intro_profile"} ref={profileRef}>
+          <img src="/is_me_ca.png" alt="profileimg" width="150" height="150" />
           <div>
             <div
               style={{ fontWeight: "800", fontSize: "16px", marginLeft: "5px" }}
@@ -85,7 +90,7 @@ export default function Home() {
         </article>
 
         {/* 기술스택 */}
-        <article className={"Box"}>
+        <article className={"Box"} >
           <div className={"Wrap_box"} style={{ marginTop: "60px" }}>
             <div className={"skill_Box_me"}>
               <div className={"skillcontent"} style={{ marginBottom: "35px" }}>
@@ -96,20 +101,21 @@ export default function Home() {
                 <img
                   className={"study_img"}
                   src="/hanghae_01.png"
-                  alt="studing1"
+                  alt="studingimg"
                   width="100%"
                   height="140"
+                  
                 />
                 <div style={{marginTop:"8px"}}>
                 항해 부트캠프를 통해 매 주 새로운 팀원들과 100시간씩 투자하고,
-                매일을 기록하여 협업 능력, 기록하는 습관 및 공부의 자세를
+                기간 동안 매일을 기록하여 협업 능력, 기록하는 습관 및 공부의 자세를
                 갖췄습니다.</div>
               </div>
             </div>
             <span className={"line"}></span>
 
             <div className={"skill_Box"}>
-              <div className={"skillcontent"}> My Skills</div>
+              <div className={"skillcontent"} > My Skills</div>
               <img
                 className={"skill_img"}
                 src="/frontskill.png"
@@ -147,9 +153,10 @@ export default function Home() {
                   alt="github"
                   width="134px"
                   height="42px"
+                 onClick={scrollToElement}
                 />
               </div>
-              <div className={"archiving_content"}>
+              <div className={"archiving_content"}  >
                 <p style={{ margin: "2rem 0" }}>
                   <span style={{ fontWeight: "900" }}>소스코드 저장소</span>{" "}
                   입니다.
