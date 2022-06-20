@@ -4,7 +4,10 @@ import Link from "next/link";
 import ProfileBar from "../components/ProfileBar";
 import ScrollEffect from "../components/ScrollEffect";
 export default function Home() {
-  const profileRef = useRef(null);
+  const profileRef  = useRef(null);
+  const skillRef = useRef(null);
+  const archivingRef = useRef(null);
+  const projectRef = useRef(null);
   console.log(profileRef)
   const [keyword, setKeyword] = useState(0);
   const scrollToElement = () => profileRef?.current?.scrollIntoView();
@@ -26,7 +29,7 @@ export default function Home() {
 
   return (
     <>
-    <ScrollEffect/>
+    <ScrollEffect profileRef={profileRef} skillRef={skillRef} archivingRef={archivingRef} projectRef={projectRef}/>
       <main>
         <img
           className={"headimg"}
@@ -47,11 +50,11 @@ export default function Home() {
             <span style={{ fontWeight: "700" }}> 이태훈</span> 입니다
           </div>
         </section>
-
+<div  ref={profileRef}/>
         {/* 프로필 bar... 수정 필요 */}
-        <ProfileBar />
+        <ProfileBar  />
 
-        <article className={"intro_profile"} ref={profileRef}>
+        <article className={"intro_profile"} >
           <img src="/is_me_ca.png" alt="profileimg" width="150" height="150" />
           <div>
             <div
@@ -90,11 +93,12 @@ export default function Home() {
         </article>
 
         {/* 기술스택 */}
+          <div ref={skillRef}/>
         <article className={"Box"} >
           <div className={"Wrap_box"} style={{ marginTop: "60px" }}>
             <div className={"skill_Box_me"}>
               <div className={"skillcontent"} style={{ marginBottom: "35px" }}>
-                신입 프론트앤드 개발자 <span>아이콘</span>
+                신입 프론트앤드 개발자 
                 <br /> 이태훈 입니다!
               </div>
               <div className={"is_me_content"}>
@@ -143,8 +147,9 @@ export default function Home() {
         </article>
 
         {/* 블로그/깃헙 */}
-        <article className={"Box"}>
-          <div className={"title"}> Archiving</div>
+     
+        <article className={"Box"} ref={archivingRef}>
+          <div className={"title"}   > Archiving</div>
           <div className={"Wrap_box"}>
             <div className={"archiving_box"}>
               <div>
@@ -153,7 +158,6 @@ export default function Home() {
                   alt="github"
                   width="134px"
                   height="42px"
-                 onClick={scrollToElement}
                 />
               </div>
               <div className={"archiving_content"}  >
@@ -196,7 +200,7 @@ export default function Home() {
           </div>
         </article>
 
-        <article className={"Box"}>
+        <article className={"Box"} ref={projectRef}>
           <div className={"title"}> Projects</div>
           <div className={"Wrap_box"}>
             <div>
@@ -418,45 +422,4 @@ export default function Home() {
       </main>
     </>
   );
-}
-
-{
-  /* 프로필
-        <article className={"Box"}>
-          <div className={"title"}> ABOUT ME</div>
-          <div className={"About_box"}>
-            <div>
-              <div className={"About_me_card"}>
-                <div className={"About_icon"}> 아이콘</div>
-                <div>
-                  <div className={"About_title"}> 이름</div>
-                  <div className={"About_desc"}> 이태훈</div>
-                </div>
-              </div>
-              <div className={"About_me_card"}>
-                <div className={"About_icon"}> 아이콘</div>
-                <div>
-                  <div className={"About_title"}>생년월일</div>
-                  <div className={"About_desc"}> 94.04.02</div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className={"About_me_card"}>
-                <div className={"About_icon"}> 아이콘</div>
-                <div>
-                  <div className={"About_title"}> 이메일</div>
-                  <div className={"About_desc"}> sper456@naver.com</div>
-                </div>
-              </div>
-              <div className={"About_me_card"}>
-                <div className={"About_icon"}> 아이콘</div>
-                <div>
-                  <div className={"About_title"}> 연락처</div>
-                  <div className={"About_desc"}> 010-6646-6904</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article> */
 }

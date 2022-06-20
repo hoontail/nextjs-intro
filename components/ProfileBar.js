@@ -1,33 +1,33 @@
 import React from 'react';
-
+import { Icon } from 'semantic-ui-react'
 const ProfileBar = () => {
   return (
     <>
               <section className={"profile_bar"}>
           <div className={"profile_intro"}>
             <div className={"icon"}>
-              <span style={{ marginRight: "6px" }}>아이콘</span>
+              <span style={{ marginRight: "6px" }}><Icon  name='users' /></span>
               <div>NAME</div>
             </div>
             <div style={{ margin: "0px 35px 0px 20px" }}>이태훈</div>
           </div>
           <div className={"profile_intro_del"}>
             <div className={"icon"}>
-              <span style={{ marginRight: "6px" }}>아이콘</span>
+              <span style={{ marginRight: "6px" }}><Icon  name='at' /></span>
               <div>E-MAIL</div>
             </div>
             <div style={{ margin: "0px 35px 0px 20px" }}>sper456@naver.com</div>
           </div>
           <div className={"profile_intro_del"}>
             <div className={"icon"}>
-              <span style={{ marginRight: "6px" }}>아이콘</span>
+              <span style={{ marginRight: "6px" }}><Icon  name='calendar' /></span>
               <div>Date of birth</div>
             </div>
             <div style={{ margin: "0px 35px 0px 20px" }}>94.04.02</div>
           </div>
           <div className={"profile_intro"} style={{ border: "none" }}>
             <div className={"icon"}>
-              <span style={{ marginRight: "6px" }}>아이콘</span>
+              <span style={{ marginRight: "6px" }}><Icon  name='call' /></span>
               <div>Contact</div>
             </div>
             <div style={{ margin: "0px 35px 0px 20px" }}>010-6646-6904</div>

@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { Icon } from 'semantic-ui-react'
 
-const ScrollEffect = () => {
+const ScrollEffect = ({profileRef, skillRef,projectRef, archivingRef}) => {
   const [ScrollY, setScrollY] = React.useState(0); // window 의 pageYOffset값을 저장
   const [ScrollActive, setScrollActive] = React.useState(false);
   function handleScroll() {
-    if (ScrollY > 200) {
+    if (ScrollY > 15) {
       setScrollY(window.pageYOffset);
       setScrollActive(true);
     } else {
@@ -13,7 +14,7 @@ const ScrollEffect = () => {
       setScrollActive(false);
     }
   }
-  console.log(ScrollY , ScrollActive)
+
   React.useEffect(() => {
     function scrollListener() {
       window.addEventListener("scroll", handleScroll);
@@ -24,39 +25,48 @@ const ScrollEffect = () => {
     }; //  window 에서 스크롤을 감시를 종료
   });
 
+
+console.log(ScrollActive)
+
   return (
     <>
      <GoTop>dfdf</GoTop>
-      { ScrollActive && (<FixedNav>
-          <FixdeNavtextBox ScrollActive>
+       <FixedNav ScrollActive={ScrollActive}>
+          <FixdeNavtextBox >
             <NavMenu
+            ScrollActive={ScrollActive}
               onClick={() => {
-                window.scrollTo({ top: 594, left: 0, behavior: "smooth" });
+                window.scrollTo({ top: profileRef?.current?.offsetTop, left: 0, behavior: "smooth" });
               }}
             >
-              About me
+           
+              Profile
             </NavMenu>
             <NavMenu
+            ScrollActive={ScrollActive}
               onClick={() => {
-                window.scrollTo({ top: 925, left: 0, behavior: "smooth" });
+                window.scrollTo({ top: skillRef?.current?.offsetTop, left: 0, behavior: "smooth" });
               }}
             >
               Skills
             </NavMenu>
-            <NavMenu     onClick={() => {
-                window.scrollTo({ top: 1475, left: 0, behavior: "smooth" });
+            <NavMenu     
+            ScrollActive={ScrollActive}
+            onClick={() => {
+                window.scrollTo({ top: archivingRef?.current?.offsetTop, left: 0, behavior: "smooth" });
               }}
            
             >
               Archiving
             </NavMenu>
             <NavMenu
+            ScrollActive={ScrollActive}
                onClick={() => {
-                window.scrollTo({ top: 2132, left: 0, behavior: "smooth" });
+                window.scrollTo({ top: projectRef?.current?.offsetTop, left: 0, behavior: "smooth" });
               }}>Projects</NavMenu>
           </FixdeNavtextBox>
-        </FixedNav>)
-    }
+        </FixedNav>
+    
     </>
   );
 };
@@ -66,32 +76,40 @@ export default ScrollEffect;
 const FixedNav = styled.div`
   width: 100%;
   top: 0;
-  min-width: 100vw;
-  border-radius: 0;
-  background-color: white;
+  color: white;
+  background-color:  ${(props) => (props.ScrollActive===true ? '#fff' : "null")};
   height: 60px;
-  border-bottom: 1px solid #dddddd;
+  /* border-bottom: 1px solid #dddddd; */
   z-index: 99;
   position: fixed;
+  /* @media screen and (max-width: 600px) {
+    background-color: gray;
+  } */
 
 `;
 
 const FixdeNavtextBox = styled.div`
-  padding: 0 16rem;
+  padding: 0 15rem;
   display: flex;
   align-items: center;
   flex-direction: row;
-
-
   height: 60px;
+    @media screen and (max-width: 600px) {
+    padding : 0 8rem;
+
+  }
+    @media screen and (max-width: 490px) {
+    padding : 0 1.5rem;
+
+  }
 `;
 
 const NavMenu = styled.div`
-  color: #222222;
+  color: ${(props) => (props.ScrollActive===true ? 'black' : "#fff")};
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
     Helvetica Neue, sans-serif !important;
   font-weight: 550 !important;
-  font-size: 14px !important;
+  font-size: 14px;
   line-height: 20px !important;
   margin-right: 50px;
   padding: 30px 0px;
