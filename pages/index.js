@@ -8,7 +8,7 @@ export default function Home() {
   const skillRef = useRef(null);
   const archivingRef = useRef(null);
   const projectRef = useRef(null);
-  console.log(profileRef)
+  //Ref 쉽게만드는법 없나
   const [keyword, setKeyword] = useState(0);
   const scrollToElement = () => profileRef?.current?.scrollIntoView();
   const keyword_content = [

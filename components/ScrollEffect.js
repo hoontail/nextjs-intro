@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Icon } from 'semantic-ui-react'
+
 
 const ScrollEffect = ({profileRef, skillRef,projectRef, archivingRef}) => {
   const [ScrollY, setScrollY] = React.useState(0); // window 의 pageYOffset값을 저장
@@ -26,7 +26,7 @@ const ScrollEffect = ({profileRef, skillRef,projectRef, archivingRef}) => {
   });
 
 
-console.log(ScrollActive)
+
 
   return (
     <>
