@@ -30,7 +30,7 @@ const ScrollEffect = ({profileRef, skillRef,projectRef, archivingRef}) => {
 
   return (
     <>
-     <GoTop>dfdf</GoTop>
+     
        <FixedNav ScrollActive={ScrollActive}>
           <FixdeNavtextBox >
             <NavMenu
