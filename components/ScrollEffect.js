@@ -6,7 +6,7 @@ const ScrollEffect = ({profileRef, skillRef,projectRef, archivingRef}) => {
   const [ScrollY, setScrollY] = React.useState(0); // window 의 pageYOffset값을 저장
   const [ScrollActive, setScrollActive] = React.useState(false);
   function handleScroll() {
-    if (ScrollY > 15) {
+    if (ScrollY > 50) {
       setScrollY(window.pageYOffset);
       setScrollActive(true);
     } else {
