@@ -28,6 +28,7 @@ Next.js에 대한 이해와 포트폴리오 제작을 위해 진행해본 프로
 
 Meta tag 추가 및 Google Search Cnsole에 등록해봄
 구글에 hoontail-portfolio 검색시 아무런 결과가 나오지 않았으나, 현재는 나오게 됨.
+<br> 구글 애널리틱스 연결 성공 방문자 데이터 수집가능
 <br><br>
 
 🔨 Technology Stack(s)<br><br>
