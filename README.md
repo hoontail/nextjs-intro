@@ -1,6 +1,7 @@
 # NexJS portfolio
 
-www.hoontail-portfolio.com
+www.hoontail-portfolio.com   // 도메인 연결 안되는 문제로 수정중
+s3 버킷 http://hoontail.s3-website.ap-northeast-2.amazonaws.com/
 
 📌 Summary<br><br>
 포트폴리오 용도로 제작한 웹사이트입니다.
