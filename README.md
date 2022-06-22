@@ -1,6 +1,6 @@
 # NexJS portfolio
 
-www.hoontail-portfolio.com   // 도메인 연결 안되는 문제로 수정중
+www.hoontail-portfolio.com   // 도메인 연결 안되는 문제로 수정중<br/>
 s3 버킷 http://hoontail.s3-website.ap-northeast-2.amazonaws.com/
 
 📌 Summary<br><br>
