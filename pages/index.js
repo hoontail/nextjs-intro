@@ -24,7 +24,6 @@ export default function Home() {
       content:
         "컴퓨터 앞에서 주당 100시간을 투자 할 수 있는 엉덩이가 무거운 개발잡니다. ",
     },
-    { id: 2, keyword: "www", content: "chocho" },
   ];
 
   return (
