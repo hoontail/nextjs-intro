@@ -1,7 +1,7 @@
 # NexJS portfolio
 
 www.hoontail-portfolio.com   // 도메인 연결 안되는 문제로 수정중<br/>
-s3 버킷 http://hoontail.s3-website.ap-northeast-2.amazonaws.com/
+s3 버킷 http://hoontail.s3-website.ap-northeast-2.amazonaws.com/ 아마존 메일수신 안해서 도메인이 취소되었었음 
 
 📌 Summary<br><br>
 포트폴리오 용도로 제작한 웹사이트입니다.
@@ -28,6 +28,7 @@ Next.js에 대한 이해와 포트폴리오 제작을 위해 진행해본 프로
 
 Meta tag 추가 및 Google Search Cnsole에 등록해봄
 구글에 hoontail-portfolio 검색시 아무런 결과가 나오지 않았으나, 현재는 나오게 됨.
+<br> 구글 애널리틱스 연결 성공 방문자 데이터 수집가능
 <br><br>
 
 🔨 Technology Stack(s)<br><br>
